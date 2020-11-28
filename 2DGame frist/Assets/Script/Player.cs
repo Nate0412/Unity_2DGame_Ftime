@@ -20,18 +20,82 @@ public class Player : MonoBehaviour
     public AudioClip fireSound;    
     [Header("生命數量"), Range(0,10)]
     public int life = 3;
-  
-    
+   [Header("檢查地面位移"),]
+   public Vector2 offset;
+    [Header("檢查地面半徑"),]
+    public float radius = 0.3f;
+
     //分數
-    private int score = 0;
+    private int score;
     //音效來源
     private AudioSource aud;
     //2D鋼體
     private Rigidbody2D rig;
     //遊戲控制器
-    private Animator anr;
+    private Animator ani;
 
-#endregion
+    // 事件:喚醒 - 在 Start 之前執行一次
+    private void Awake()
+    {
+        // 鋼體 - 取得元件<鋼體元件>();
+        // 抓到角色身上的鋼體元件存放到rig欄位內
+        rig = GetComponent<Rigidbody2D>();
+        ani = GetComponent<Animator>();
+
+    }
+    private void Update()
+    {
+        Move();
+        Fire();
+        Jump();
+    }
+
+    /// <summary>
+    /// 移動功能
+    /// </summary>
+    private void Move()
+    {
+        // 水平浮點數 = 輸入的取得軸向("水平") - 左右AD
+        float h = Input.GetAxis("Horizontal");
+        // 鋼體的加速度 = 新 二維的向量(水平浮點數 * 速度，鋼體的假速度的Ｙ)
+        rig.velocity = new Vector2(h = speed, rig.velocity.y);
+        //
+        //
+        ani.SetBool("跑步開關", h != 0);
+    }
+
+    /// <summary>
+    /// 跳躍功能
+    /// </summary>
+    private void Jump()
+    {
+
+    }
+
+    /// <summary>
+    /// 開槍功能
+    /// </summary>
+    private void Fire()
+    {
+
+    }
+
+    /// <summary>
+    /// 死亡功能
+    /// </summary>
+    /// <param name="obj">碰到物件的名稱</param>
+    private void Dead(string obj)
+    {
+
+    }
+
+
+
+
+
+
+
+    #endregion
 
 
 

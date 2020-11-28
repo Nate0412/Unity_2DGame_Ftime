@@ -39,6 +39,7 @@ public class Car : MonoBehaviour
 
     #endregion
 
+    //事件:
     private void Start()
     {
         print("哈囉!沃德~");
