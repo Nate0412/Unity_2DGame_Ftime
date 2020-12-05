@@ -10,4 +10,36 @@ public class CameraControl : MonoBehaviour
     public Vector2 limit = new Vector2(0, 3.5f);
 
 
+
+
+    private void Track()
+    {
+        Vector3 posA = transform.position;                          //
+        Vector3 posB = transform.position;                          //
+
+        posB.z = -10;                                               // 固定 Z 軸
+
+        //
+
+        posA = Vector3.Lerp(posA, posB, speed * Time.deltaTime);    // 插植
+
+        transform.position = posA;                                  // 攝影機 座標 = A 點
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
