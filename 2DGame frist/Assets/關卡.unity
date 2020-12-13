@@ -9664,8 +9664,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be2147c0d6b82ad46824e585ea522468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 1.5
+  target: {fileID: 1051318909}
+  speed: 4.6
   limit: {x: 0, y: 3.5}
 --- !u!1 &649638094
 GameObject:
@@ -9820,7 +9820,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051318907}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.53, y: -1.21, z: 0}
+  m_LocalPosition: {x: -7.53, y: 0.15, z: 0}
   m_LocalScale: {x: 1.061201, y: 1.331325, z: 1}
   m_Children:
   - {fileID: 649638095}
@@ -9859,8 +9859,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09173614, y: -0.16459975}
-  m_Size: {x: 1.1427076, y: 1.5005879}
+  m_Offset: {x: -0.08, y: -0.13}
+  m_Size: {x: 1.2, y: 1.59}
   m_Direction: 0
 --- !u!50 &1051318912
 Rigidbody2D:
@@ -9877,7 +9877,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 6
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -9896,15 +9896,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10.5
-  jump: 0
+  jump: 900
   IsGround: 1
   bullet: {fileID: 630204648823253807, guid: d0829aa48993ff2489f4658d5068cdd8, type: 3}
   point: {fileID: 649638095}
   bulletspeed: 800
   fireSound: {fileID: 0}
   life: 3
-  offset: {x: -0.09, y: -1.13}
-  radius: 0.1
+  offset: {x: 0, y: -1}
+  radius: 0.42
 --- !u!1 &1070293721
 GameObject:
   m_ObjectHideFlags: 0
@@ -10120,7 +10120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1099598868}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.86, y: -0.54, z: 0}
+  m_LocalPosition: {x: -12.99, y: -0.48, z: 0}
   m_LocalScale: {x: 1.061201, y: 1.331325, z: 1}
   m_Children:
   - {fileID: 561929814}

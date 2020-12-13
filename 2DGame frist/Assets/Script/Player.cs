@@ -91,8 +91,14 @@ public class Player : MonoBehaviour
             IsGround = false;                // 不在地面上了
             rig.AddForce(transform.up * jump);
         }
-
-
+        else if (Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y) + offset, radius, 1 << 8))
+        {
+            IsGround = true;
+        }
+        else
+        {
+            IsGround = false;
+        }
     }
 
     /// <summary>
@@ -112,7 +118,7 @@ public class Player : MonoBehaviour
             //上 綠 transform.up
             //右 紅 transform.right
             //前 藍 transform.forward
-            temp.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletspeed);
+            temp.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletspeed + transform.up*150);
         }
         
     }

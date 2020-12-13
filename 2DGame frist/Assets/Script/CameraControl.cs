@@ -11,15 +11,18 @@ public class CameraControl : MonoBehaviour
 
 
 
-
+    /// <summary>
+    /// 追蹤
+    /// </summary>
     private void Track()
     {
-        Vector3 posA = transform.position;                          //
-        Vector3 posB = transform.position;                          //
+        Vector3 posA = transform.position;                          //  取得攝影機座標
+        Vector3 posB = target.position;                             //  取得目標座標
 
         posB.z = -10;                                               // 固定 Z 軸
+        posB.y = Mathf.Clamp(posB.y, limit.x, limit.y);
 
-        //
+        // 一禎的時間  Time.deltaTime
 
         posA = Vector3.Lerp(posA, posB, speed * Time.deltaTime);    // 插植
 
@@ -29,7 +32,13 @@ public class CameraControl : MonoBehaviour
     }
 
 
+    private void LateUpdate()
+    {
 
+        Track();
+
+
+    }
 
 
 
